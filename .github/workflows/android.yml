@@ -46,5 +46,5 @@ jobs:
     - name: Download Bad Apple
       run: mkdir raw_asset && curl -L https://archive.org/download/bad-apple-resources/bad_apple%40720p60fps.ia.mp4 >> raw_asset/badapple.mp4 
     - name: Build with Gradle
-      run: ./gradlew :badapple:bakeAssets
+      run: ./gradlew :badapple:bakeAssets && ls build
       
