@@ -41,7 +41,7 @@ abstract class BakeAssetTask: DefaultTask(){
         )
         val ffmpeg = p.start()
         while(ffmpeg.isAlive){
-            println("ffmpeg : ${ffmpeg.errorReader().readLine()}")
+            println("ffmpeg : ${ffmpeg.getInputStream().readAllBytes()}")
         }
         val e = ffmpeg.exitValue()
         if(e == 0){
@@ -67,7 +67,7 @@ abstract class BakeAssetTask: DefaultTask(){
             tf.absolutePath)
         val ffmpeg = p.start()
         while(ffmpeg.isAlive){
-            println("ffmpeg : ${ffmpeg.errorReader().readLine()}")
+            println("ffmpeg : ${ffmpeg.getInputStream().readAllBytes()}")
         }
         val e = ffmpeg.exitValue()
         if(e == 0){
