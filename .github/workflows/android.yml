@@ -20,10 +20,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-
-    - name: set up ffmpeg
+        
     - uses: FedericoCarboni/setup-ffmpeg@v3
-      id: setup-ffmpeg
+    - name: set up ffmpeg
       with:
        # A specific version to download, may also be "release" or a specific version
        # like "6.1.0". At the moment semver specifiers (i.e. >=6.1.0) are supported
